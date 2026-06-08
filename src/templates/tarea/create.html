@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Crear tarea{% endblock %}
+
+{% block content %}
+
+<div class="max-w-xl mx-auto">
+    <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold">
+                Crear tarea
+            </h1>
+
+            <p class="text-sm text-zinc-400 mt-1">
+                Registra una nueva tarea para el equipo
+            </p>
+        </div>
+
+        <form method="POST" class="space-y-5">
+            <div>
+                <label class="block mb-2 text-zinc-300 text-sm">
+                    Descripción
+                </label>
+
+                <input
+                    type="text"
+                    name="descripcion"
+                    required
+                    placeholder="Ej: Revisar documentación del proyecto"
+                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-4 py-3 text-sm
+                           focus:outline-none focus:border-blue-500 transition">
+            </div>
+            <div class="flex items-center gap-2">
+                <input type="checkbox"
+                       name="completado"
+                       class="accent-blue-600 w-4 h-4">
+
+                <label class="text-zinc-300 text-sm">
+                    Marcar como completada
+                </label>
+            </div>
+
+            <div class="flex justify-end gap-3 pt-2">
+                <a href="{{ url_for('tarea.index') }}"
+                   class="bg-zinc-700 hover:bg-zinc-600 px-5 py-2 rounded-lg text-sm transition">
+                    Cancelar
+                </a>
+
+                <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg text-sm transition">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

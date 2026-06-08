@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Variables de entorno
+.env
+.env.*
+
+# Base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de instancia Flask
+instance/
+
+# Caché y testing
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/

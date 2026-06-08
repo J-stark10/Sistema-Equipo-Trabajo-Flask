@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <a href="{{ url_for('miembro.index') }}"
+       class="group rounded-xl border border-zinc-800 bg-zinc-900 p-6 hover:border-zinc-600 transition">
+        <h2 class="text-lg font-medium text-white group-hover:text-zinc-200 transition">
+            Miembros
+        </h2>
+        <p class="text-sm text-zinc-400 mt-2">
+            Gestión de integrantes del equipo. Crear, editar y eliminar miembros.
+        </p>
+    </a>
+
+    <a href="{{ url_for('tarea.index') }}"
+       class="group rounded-xl border border-zinc-800 bg-zinc-900 p-6 hover:border-zinc-600 transition">
+        <h2 class="text-lg font-medium text-white group-hover:text-zinc-200 transition">
+            Tareas
+        </h2>
+        <p class="text-sm text-zinc-400 mt-2">
+            Administración de tareas asignadas y control de estados.
+        </p>
+    </a>
+
+</div>
+{% endblock %}
